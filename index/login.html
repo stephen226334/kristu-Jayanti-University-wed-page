@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Kristu Jayanti University</title>
+
+    <meta name="description"
+        content="Access the Kristu Jayanti University Portal. Log in as a Student, Faculty member, or Administrator.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../style/style.css?v=4">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="login-body">
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-container">
+
+            <a href="index.html" class="logo">
+                <img src="../static/logo.png" alt="Kristu Jayanti University Logo">
+                <div class="logo-text">
+                    <h1>Kristu Jayanti University</h1>
+                    <span>Bengaluru</span>
+                </div>
+            </a>
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html#home" class="nav-link">Home</a></li>
+                    <li><a href="index.html#about" class="nav-link">About Us</a></li>
+                    <li><a href="index.html#academics" class="nav-link">Academics</a></li>
+                    <li><a href="index.html#campus" class="nav-link">Campus Life</a></li>
+                    <li><a href="index.html#admissions" class="nav-link">Admissions</a></li>
+                    <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                    <li><a href="#" class="btn btn-primary nav-btn active">Login</a></li>
+                </ul>
+
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- Login Container -->
+    <main class="login-wrapper">
+        <div class="login-container">
+            <div class="login-card-holder">
+                <div class="login-card-logo" style="display: flex; justify-content: center; padding-top: 35px; margin-bottom: 5px;">
+                    <img src="../static/logo.png" alt="Kristu Jayanti University Logo" class="login-brand-logo" style="width: 120px !important; height: auto !important; filter: drop-shadow(0 4px 8px rgba(0, 86, 179, 0.15)); transition: transform 0.3s ease;">
+                </div>
+                <div class="login-card-header">
+                    <h2>Portal Access</h2>
+                    <p>Enter your credentials to access your dashboard</p>
+                </div>
+
+                <!-- Role Selector -->
+                <div class="role-selector">
+                    <button type="button" class="role-btn active" data-role="student">
+                        <i class="fa-solid fa-graduation-cap"></i> Student
+                    </button>
+                    <button type="button" class="role-btn" data-role="faculty">
+                        <i class="fa-solid fa-chalkboard-user"></i> Faculty
+                    </button>
+                    <button type="button" class="role-btn" data-role="admin">
+                        <i class="fa-solid fa-user-shield"></i> Admin
+                    </button>
+                </div>
+
+                <form id="loginForm" class="login-form">
+                    <!-- Username/Email Field -->
+                    <div class="form-group">
+                        <label for="username" class="form-label">Username / Email ID</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-user input-icon"></i>
+                            <input type="text" id="username" name="username" class="form-input" placeholder="e.g., student@kristujayanti.edu.in" required autocomplete="username">
+                        </div>
+                    </div>
+
+                    <!-- Password Field -->
+                    <div class="form-group">
+                        <div class="label-row">
+                            <label for="password" class="form-label">Password</label>
+                            <a href="#" class="forgot-link">Forgot Password?</a>
+                        </div>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-lock input-icon"></i>
+                            <input type="password" id="password" name="password" class="form-input" placeholder="Enter your password" required autocomplete="current-password">
+                            <button type="button" id="passwordToggle" class="password-toggle-btn" aria-label="Toggle Password Visibility">
+                                <i class="fa-solid fa-eye-slash"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Remember Me -->
+                    <div class="form-options">
+                        <label class="checkbox-container">
+                            <input type="checkbox" name="remember">
+                            <span class="checkmark"></span>
+                            Keep me logged in
+                        </label>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn btn-primary login-submit-btn">
+                        <span>Sign In</span>
+                        <i class="fa-solid fa-arrow-right-to-bracket btn-icon"></i>
+                    </button>
+                </form>
+
+                <div id="formFeedback" class="form-feedback" aria-live="polite"></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+
+        <div class="container footer-container">
+
+            <div class="footer-col">
+                <h3>Kristu Jayanti University</h3>
+                <p>
+                    K. Narayanapura, Kothanur P.O.,<br>
+                    Bengaluru, Karnataka - 560077
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#academics">Academics</a></li>
+                    <li><a href="index.html#admissions">Admissions</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li><i class="fa-solid fa-phone"></i> +91 80 28465611</li>
+                    <li><i class="fa-solid fa-envelope"></i> info@kristujayanti.edu.in</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Kristu Jayanti University. All Rights Reserved.</p>
+        </div>
+
+    </footer>
+
+    <script src="../script/script.js"></script>
+</body>
+
+</html>
